@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+    transition: 0.5s ease-in-out;
+}
+.customer-info{
+    padding: 2rem;
+}
+.top-bar{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.516);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+.top-bar .heading h2{
+    font-weight: 300;
+}
+.top-bar .pointer{
+    display: flex;
+    align-items: center;
+    padding-bottom: 0;
+}
+.top-bar .pointer .step{
+    font-size: .9rem;
+    text-transform: uppercase;
+    font-weight: 600; 
+    margin-right: .5rem;  
+}
+.top-bar .pointer .point{
+    display: flex;
+}
+.top-bar .pointer .point .one{
+    background-color: rgb(0, 0, 123);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: .3rem;
+}
+.top-bar .pointer .point .two {
+    background-color: rgba(128, 128, 128, 0.516);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.item-details{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.item-details form input{
+    padding: 1rem;
+    outline: none !important;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.516);
+}
+.item-details form button, 
+.generate-invoice button{
+    padding: 1rem 3rem;
+    background-color: rgba(0, 0, 123, 0.811);
+    border: none !important;
+    outline: none !important;
+    color: #f1f1f1;
+    box-shadow: 0.2rem 0.2rem 0.4rem #333;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.generate-invoice button{
+    margin-top: 1rem;
+}
+.item-details form button:hover,
+.generate-invoice button:hover {
+    background-color: rgb(0, 0, 123);
+    transform: translateY(1px);
+}
+
+.item-details .items{
+    background-color: rgba(128, 128, 128, 0.516);
+    padding: 1rem 3rem;
+    border-radius: 4px;
+}
+.item-details .items .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.item-details .items .item h3{
+    font-weight: 600;
+    margin: 1rem auto;
+    font-size: 1rem;
+}
+.item-name, .item-quantity{
+    margin-right: 1rem;
+
+}
