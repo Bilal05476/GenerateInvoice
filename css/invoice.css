@@ -15,14 +15,14 @@
 }
 .container .left{
     border: 1px solid #ccc;
-    flex: 0.5;
+    flex: 0.3;
     border-collapse: collapse;
 }
 .container .left .logo{
     text-align: center;
 }
 .logo img{
-    width: 30%;
+    width: 100%;
 }
 .container .heading{
     background-color: rgba(51, 51, 51, 0.325);
@@ -54,7 +54,6 @@
 .container .right{
     border: 1px solid #ccc;
     border-collapse: collapse;
-    flex: 0.5;
-    background-color: #ccc;
+    flex: 0.7;
 }
 

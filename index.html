@@ -27,9 +27,9 @@
         <form class="item-form">
           <input
             type="text"
-            name="invoice"
-            id="invoiceNumber"
-            placeholder="Invoice number"
+            name="order"
+            id="orderNumber"
+            placeholder="Order number"
             required
           />
           <input
@@ -102,7 +102,6 @@
       </div>
       <div class="item-details">
         <form class="item-form">
-          <input type="text" name="item" id="item" placeholder="Item" />
           <input
             type="text"
             name="quantity"
@@ -110,41 +109,8 @@
             placeholder="Quantity"
           />
           <input type="text" name="price" id="price" placeholder="price" />
-          <button type="submit" class="add-item">Add Item</button>
-        </form>
-
-        <table class="items">
-          <th>Item Name</th>
-          <th>Quantity</th>
-          <th>Price (Rs)</th>
-          <th>Remove</th>
-          <tr class="item">
-            <td>Tea</td>
-            <td>2</td>
-            <td>200</td>
-            <td class="delete">&times;</td>
-          </tr>
-          <tr class="item">
-            <td>Sugar</td>
-            <td>2</td>
-            <td>200</td>
-            <td class="delete">&times;</td>
-          </tr>
-          <tr class="item">
-            <td>Rice</td>
-            <td>2</td>
-            <td>200</td>
-            <td class="delete">&times;</td>
-          </tr>
-        </table>
-        <div class="subtotal-section">
-          <h4>Subtotal</h4>
-          <div>
-            <h5 class="sign">Rs
-              <span class="price">800</span>
-            </h5>
-          </div>
-        </div>
+        
+        </form>        
         <div class="generate-invoice">
           <button>Generate Invoice</button>
         </div>
