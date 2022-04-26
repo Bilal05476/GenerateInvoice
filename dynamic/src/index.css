@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  font-family: 'Poppins',
+  sans-serif;
+  transition: 0.5s ease-in-out;
+}
+
+.generate-invoice {
+  text-align: center;
+  margin: 2rem auto;
+}
+.generate-invoice .button {
+  padding: 1rem 3rem;
+  background-color: rgba(0, 0, 123, 0.811);
+  border: none !important;
+  outline: none !important;
+  color: #f1f1f1;
+  box-shadow: 0.2rem 0.2rem 0.4rem #333;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.generate-invoice .button {
+  margin-top: 1rem;
+}
+
+.generate-invoice .button:hover {
+  background-color: rgb(0, 0, 123);
+}
