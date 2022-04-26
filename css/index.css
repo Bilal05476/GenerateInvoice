@@ -57,6 +57,9 @@
     border-radius: 5px;
     border: 1px solid rgba(128, 128, 128, 0.516);
 }
+.item-details form input:focus{
+    border: 1px solid rgba(0, 0, 123, 0.811);
+}
 .item-details form button, 
 .generate-invoice button{
     padding: 1rem 3rem;
@@ -79,21 +82,27 @@
 }
 
 .item-details .items{
-    background-color: rgba(128, 128, 128, 0.516);
+    background-color: aliceblue;
     padding: 1rem 3rem;
     border-radius: 4px;
 }
-.item-details .items .item{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+th,
+td {
+    padding: 0.5rem 0rem;
+    padding-right: .9rem;
 }
-.item-details .items .item h3{
-    font-weight: 600;
-    margin: 1rem auto;
-    font-size: 1rem;
+.items .item .delete{  
+    display: block;
+    text-align: center;
+    padding: 0.5rem 0rem;
+    font-size: 1.2rem;
+    color: aliceblue;
 }
-.item-name, .item-quantity{
-    margin-right: 1rem;
+.items .item:hover .delete{
+    display: block;
+    cursor: pointer;
+    background-color: crimson;
+    color:#fff;
+    border-radius: 4px;
+}
 
-}

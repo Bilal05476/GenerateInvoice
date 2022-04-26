@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+}
+.cutter{
+    border: 1px dashed #333;
+}
+.container{
+    display: flex;
+    margin: 2rem;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+.container .left{
+    border: 1px solid #ccc;
+    flex: 0.5;
+    border-collapse: collapse;
+}
+.container .left .logo{
+    text-align: center;
+    padding: 1rem;
+}
+.container .heading{
+    background-color: rgba(51, 51, 51, 0.518);
+    color: #212121;
+    padding: 0.5rem;
+    text-align: center;
+}
+.container .heading h4{
+    font-weight: 600;
+}
+.container .detail{
+    display: flex;
+}
+.container .detail h4{
+    background-color: #bababa86;
+}
+.container .detail h4, .container .detail p{
+    padding: 1rem 3rem;
+    padding-left: 0.5rem;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+.container .detail p {
+   width: 100%;
+}
+.container .right{
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    flex: 0.5;
+}

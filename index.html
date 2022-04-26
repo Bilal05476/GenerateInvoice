@@ -23,6 +23,67 @@
           </div>
         </div>
       </div>
+      <div class="item-details">
+        <form class="item-form">
+          <input
+            type="text"
+            name="invoice"
+            id="invoiceNumber"
+            placeholder="Invoice number"
+            required
+          />
+          <input
+            type="text"
+            name="name"
+            id="customerName"
+            placeholder="Your customer's name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="customerEmail"
+            placeholder="Your customer's email"
+            required
+          />
+          <input
+            type="text"
+            name="address"
+            id="cAddress"
+            placeholder="Customer's address"
+            required
+          />
+          <br />
+          <input
+            type="text"
+            name="date"
+            id="invoiceDate"
+            placeholder="Invoice date"
+            required
+          />
+          <input
+            type="text"
+            name="city"
+            id="iCity"
+            placeholder="Customer's city"
+            required
+          />
+          <input
+            type="text"
+            name="province"
+            id="iProvince"
+            placeholder="State/Province"
+            required
+          />
+          <input
+            type="text"
+            name="country"
+            id="iCountry"
+            readonly
+            value="Pakistan"
+          />
+        </form>
+      </div>
     </div>
 
     <!--Second Step (Enter Items)-->
@@ -51,22 +112,32 @@
           <input type="text" name="price" id="price" placeholder="price" />
           <button type="submit" class="add-item">Add Item</button>
         </form>
-        <div class="items">
-          <!-- <div class="item">
-            <div class="item-name">
-              <h3>Item Name</h3>
-              <p>Tea</p>
-            </div>
-            <div class="item-quantity">
-              <h3>Quantity</h3>
-              <p>2</p>
-            </div>
-            <div class="item-price">
-              <h3>Price (Rs)</h3>
-              <p>200</p>
-            </div>
-          </div> -->
-        </div>
+
+        <table class="items">
+          <th>Item Name</th>
+          <th>Quantity</th>
+          <th>Price (Rs)</th>
+          <th>Remove</th>
+          <tr class="item">
+            <td>Tea</td>
+            <td>2</td>
+            <td>200</td>
+            <td class="delete">&times;</td>
+          </tr>
+          <tr class="item">
+            <td>Sugar</td>
+            <td>2</td>
+            <td>200</td>
+            <td class="delete">&times;</td>
+          </tr>
+          <tr class="item">
+            <td>Rice</td>
+            <td>2</td>
+            <td>200</td>
+            <td class="delete">&times;</td>
+          </tr>
+        </table>
+
         <div class="generate-invoice">
           <button>Generate Invoice</button>
         </div>
