@@ -40,10 +40,10 @@
             required
           />
           <input
-            type="email"
-            name="email"
-            id="customerEmail"
-            placeholder="Your customer's email"
+            type="text"
+            name="destination"
+            id="cDestination"
+            placeholder="Customer's destination"
             required
           />
           <input
@@ -137,7 +137,14 @@
             <td class="delete">&times;</td>
           </tr>
         </table>
-
+        <div class="subtotal-section">
+          <h4>Subtotal</h4>
+          <div>
+            <h5 class="sign">Rs
+              <span class="price">800</span>
+            </h5>
+          </div>
+        </div>
         <div class="generate-invoice">
           <button>Generate Invoice</button>
         </div>

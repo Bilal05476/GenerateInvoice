@@ -1,5 +1,8 @@
 *{
     margin: 0;
+    font-family: sans-serif;
+    transition: 0.5s ease-in-out;
+    font-size: 96%;
 }
 .cutter{
     border: 1px dashed #333;
@@ -17,10 +20,12 @@
 }
 .container .left .logo{
     text-align: center;
-    padding: 1rem;
+}
+.logo img{
+    width: 30%;
 }
 .container .heading{
-    background-color: rgba(51, 51, 51, 0.518);
+    background-color: rgba(51, 51, 51, 0.325);
     color: #212121;
     padding: 0.5rem;
     text-align: center;
@@ -33,18 +38,23 @@
 }
 .container .detail h4{
     background-color: #bababa86;
+    font-weight: 600;
+    width: 300px;
 }
 .container .detail h4, .container .detail p{
-    padding: 1rem 3rem;
-    padding-left: 0.5rem;
+    padding: 0.5rem 0.5rem;
     border: 1px solid #ccc;
     border-collapse: collapse;
+    background-color: #fff;
 }
 .container .detail p {
    width: 100%;
+   font-weight: 300;
 }
 .container .right{
     border: 1px solid #ccc;
     border-collapse: collapse;
     flex: 0.5;
+    background-color: #ccc;
 }
+
