@@ -68,7 +68,7 @@ const Invoices = React.forwardRef((props, ref) => {
         orderQuantity={props.orderQuantity}
         cAmount={props.cAmount}
       />
-      <div class="cutter"></div>
+      <div className="cutter"></div>
       <Container
         orderID={props.orderID}
         cName={props.cName}
@@ -78,7 +78,7 @@ const Invoices = React.forwardRef((props, ref) => {
         orderQuantity={props.orderQuantity}
         cAmount={props.cAmount}
       />
-      <div class="cutter"></div>
+      <div className="cutter"></div>
       <Container
         orderID={props.orderID}
         cName={props.cName}
@@ -121,9 +121,21 @@ const Invoice = ({
         <NavLink to="/" className="button" style={{ margin: "1rem" }}>
           Back to Home
         </NavLink>
-        <button onClick={handlePrint} className="button">
-          Generate Invoice
-        </button>
+        {orderID === "" ||
+        cName === "" ||
+        cAddress === "" ||
+        cPhone === "" ||
+        orderDate === "" ||
+        orderQuantity === "" ||
+        cAmount === "" ? (
+          ""
+        ) : (
+          <>
+            <button onClick={handlePrint} className="button">
+              Generate Invoice
+            </button>
+          </>
+        )}
       </div>
     </>
   );

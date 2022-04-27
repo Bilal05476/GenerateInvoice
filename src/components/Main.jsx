@@ -1,5 +1,7 @@
 import "../css/main.css";
 import { NavLink } from "react-router-dom";
+import logo from "../img/logo.png";
+
 
 const Main = ({
   orderID,
@@ -28,6 +30,10 @@ const Main = ({
   }
   return (
     <>
+      {/* logo */}
+      <div className="main-logo">
+        <img src={logo} alt="logo" />
+      </div>
       {/* First Step (Customer Information) */}
       <div className="customer-info">
         <div className="top-bar">
@@ -83,7 +89,7 @@ const Main = ({
             />
             <br />
             <input
-              type="text"
+              type="datetime-local"
               name="date"
               id="invoiceDate"
               placeholder="Invoice date"
@@ -96,14 +102,14 @@ const Main = ({
               name="city"
               id="iCity"
               placeholder="Customer's city"
-              readonly
+              readOnly={true}
               value="Karachi"
             />
             <input
               type="text"
               name="country"
               id="iCountry"
-              readonly
+              readOnly={true}
               value="Pakistan"
             />
           </form>
@@ -127,7 +133,9 @@ const Main = ({
         <div className="item-details">
           <form className="item-form">
             <input
-              type="text"
+              type="number"
+              min="1"
+              max="100"
               name="quantity"
               id="quantity"
               placeholder="Quantity"
@@ -138,7 +146,7 @@ const Main = ({
               type="text"
               name="price"
               id="price"
-              placeholder="Price"
+              placeholder="Price(Rs)"
               value={cAmount}
               onChange={(e) => setCAmount(e.target.value)}
             />

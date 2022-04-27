@@ -1,6 +1,14 @@
 .customer-info {
   padding: 2rem;
 }
+.main-logo{
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+}
+.main-logo img{
+  width: 15%;
+}
 
 .top-bar {
   border-bottom: 1px solid rgba(128, 128, 128, 0.516);
@@ -48,8 +56,6 @@
 .item-details {
   margin-top: 2rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 
@@ -57,6 +63,7 @@
   padding: 1rem;
   outline: none !important;
   margin-right: 2rem;
+  width: 20%;
   margin-bottom: 2rem;
   border-radius: 5px;
   border: 1px solid rgba(128, 128, 128, 0.516);
@@ -66,31 +73,7 @@
   border: 1px solid rgba(0, 0, 123, 0.811);
 }
 
-.item-details .items {
-  background-color: aliceblue;
-  padding: 1rem 3rem;
-  border-radius: 4px;
-}
 
-th,
-td {
-  padding: 0.5rem 0rem;
-  padding-right: 0.9rem;
+#cAddress{
+  width: 45.3%;
 }
-
-.items .item .delete {
-  display: block;
-  text-align: center;
-  padding: 0.5rem 0rem;
-  font-size: 1.2rem;
-  color: aliceblue;
-}
-
-.items .item:hover .delete {
-  display: block;
-  cursor: pointer;
-  background-color: crimson;
-  color: #fff;
-  border-radius: 4px;
-}
-
