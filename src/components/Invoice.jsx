@@ -47,8 +47,16 @@ const Container = ({
             <div className="heading">
               <h4>Subtotal</h4>
             </div>
-            <Detail h4="Payment Method" p="COD" />
-            <Detail h4="Collection Amount" p={cAmount} />
+            <div className="payment-detail">
+              <div className="detail">
+                <h4>Payment Method</h4>
+                <p>COD</p>
+              </div>
+              <div className="detail">
+                <h4>Collection Amount</h4>
+                <p>{cAmount}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

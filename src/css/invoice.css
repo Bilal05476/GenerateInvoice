@@ -1,6 +1,7 @@
 .cutter {
   border: 1px dashed #333;
 }
+
 .container {
   font-size: 0.7rem;
   display: flex;
@@ -13,7 +14,7 @@
   flex: 0.3;
   border-collapse: collapse;
 }
-.container .left small{
+.container .left small {
   font-weight: 700;
   padding-left: 1rem;
   font-size: 0.7rem;
@@ -22,7 +23,7 @@
   text-align: center;
 }
 .logo img {
-  width: 80%;
+  width: 90%;
   margin-top: 2.5rem;
 }
 .container .heading {
@@ -57,4 +58,16 @@
   border: 1px solid #ccc;
   border-collapse: collapse;
   flex: 0.7;
+}
+
+.payment-detail {
+  display: flex;
+  justify-content: space-between;
+}
+.payment-detail .detail h4 {
+  width: 200px;
+}
+.payment-detail .detail p{
+  width: 50%;
+
 }

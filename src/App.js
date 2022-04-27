@@ -1,7 +1,7 @@
 import Invoice from "./components/Invoice";
 import Main from "./components/Main";
 import { Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 function App() {
   const [orderID, setOrderID] = useState("");
@@ -12,13 +12,6 @@ function App() {
   const [orderQuantity, setOrderQuantity] = useState("");
   const [cAmount, setCAmount] = useState("");
 
-  useEffect(() => {
-    if (orderDate !== " ") {
-      // let newDate = orderDate.replace("T", " : ");
-      // setOrderDate(newDate);
-      console.log(orderDate.indexOf(10));
-    }
-  }, []);
   return (
     <Routes>
       <Route
