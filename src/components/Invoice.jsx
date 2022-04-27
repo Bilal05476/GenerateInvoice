@@ -1,6 +1,8 @@
 import "../css/invoice.css";
 import logo from "../img/logo.png";
 import { NavLink } from "react-router-dom";
+import React, { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 
 const Detail = (props) => {
   return (
@@ -54,6 +56,42 @@ const Container = ({
   );
 };
 
+const Invoices = React.forwardRef((props, ref) => {
+  return (
+    <div ref={ref}>
+      <Container
+        orderID={props.orderID}
+        cName={props.cName}
+        cAddress={props.cAddress}
+        cPhone={props.cPhone}
+        orderDate={props.orderDate}
+        orderQuantity={props.orderQuantity}
+        cAmount={props.cAmount}
+      />
+      <div class="cutter"></div>
+      <Container
+        orderID={props.orderID}
+        cName={props.cName}
+        cAddress={props.cAddress}
+        cPhone={props.cPhone}
+        orderDate={props.orderDate}
+        orderQuantity={props.orderQuantity}
+        cAmount={props.cAmount}
+      />
+      <div class="cutter"></div>
+      <Container
+        orderID={props.orderID}
+        cName={props.cName}
+        cAddress={props.cAddress}
+        cPhone={props.cPhone}
+        orderDate={props.orderDate}
+        orderQuantity={props.orderQuantity}
+        cAmount={props.cAmount}
+      />
+    </div>
+  );
+});
+
 const Invoice = ({
   orderID,
   cName,
@@ -63,42 +101,29 @@ const Invoice = ({
   orderDate,
   cAmount,
 }) => {
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+  });
   return (
     <>
-      <Container
+      <Invoices
         orderID={orderID}
         cName={cName}
         cAddress={cAddress}
         cPhone={cPhone}
-        orderDate={orderDate}
         orderQuantity={orderQuantity}
-        cAmount={cAmount}
-      />
-      <div class="cutter"></div>
-      <Container
-        orderID={orderID}
-        cName={cName}
-        cAddress={cAddress}
-        cPhone={cPhone}
         orderDate={orderDate}
-        orderQuantity={orderQuantity}
         cAmount={cAmount}
+        ref={componentRef}
       />
-      <div class="cutter"></div>
-      <Container
-        orderID={orderID}
-        cName={cName}
-        cAddress={cAddress}
-        cPhone={cPhone}
-        orderDate={orderDate}
-        orderQuantity={orderQuantity}
-        cAmount={cAmount}
-      />
-      <div class="cutter"></div>
       <div className="generate-invoice">
-        <NavLink to="/" className="button">
+        <NavLink to="/" className="button" style={{ margin: "1rem" }}>
           Back to Home
         </NavLink>
+        <button onClick={handlePrint} className="button">
+          Generate Invoice
+        </button>
       </div>
     </>
   );

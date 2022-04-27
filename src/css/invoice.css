@@ -2,9 +2,9 @@
   border: 1px dashed #333;
 }
 .container {
-  font-size: 82%;
+  font-size: 0.7rem;
   display: flex;
-  margin: 2rem;
+  margin: 0.5rem 1rem;
   border: 1px solid #ccc;
   border-collapse: collapse;
 }
@@ -16,12 +16,13 @@
 .container .left small{
   font-weight: 700;
   padding-left: 1rem;
+  font-size: 0.7rem;
 }
 .container .left .logo {
   text-align: center;
 }
 .logo img {
-  width: 100%;
+  width: 80%;
   margin-top: 2.5rem;
 }
 .container .heading {
@@ -37,7 +38,7 @@
   display: flex;
 }
 .container .detail h4 {
-  background-color: #bababa86;
+  background-color: #f1f1f1;
   font-weight: 600;
   width: 300px;
 }
@@ -46,9 +47,9 @@
   padding: 0.5rem 0.5rem;
   border: 1px solid #ccc;
   border-collapse: collapse;
-  background-color: #fff;
 }
 .container .detail p {
+  background-color: #fff;
   width: 100%;
   font-weight: 300;
 }

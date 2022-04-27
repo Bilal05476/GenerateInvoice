@@ -17,6 +17,15 @@ const Main = ({
   cAmount,
   setCAmount,
 }) => {
+  const onReset = () => {
+    setCName("")
+    setCAddress("")
+    setCPhone("")
+    setOrderDate("")
+    setOrderID("")
+    setCAmount("")
+    setOrderQuantity("")
+  }
   return (
     <>
       {/* First Step (Customer Information) */}
@@ -144,9 +153,14 @@ const Main = ({
             cAmount === "" ? (
               ""
             ) : (
-              <NavLink to="/invoice" className="button">
-                Generate Invoice
-              </NavLink>
+              <>
+                <button onClick={onReset} className="button reset">
+                  Reset
+                </button>
+                <NavLink to="/invoice" className="button">
+                  Next
+                </NavLink>
+              </>
             )}
           </div>
         </div>
