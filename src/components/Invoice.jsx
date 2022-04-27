@@ -65,77 +65,44 @@ const Container = ({
 };
 
 const Invoices = React.forwardRef((props, ref) => {
+  const { invoiceItem } = props;
+  console.log(invoiceItem);
   return (
     <div ref={ref}>
-      <Container
-        orderID={props.orderID}
-        cName={props.cName}
-        cAddress={props.cAddress}
-        cPhone={props.cPhone}
-        orderDate={props.orderDate}
-        orderQuantity={props.orderQuantity}
-        cAmount={props.cAmount}
-      />
-      <div className="cutter"></div>
-      <Container
-        orderID={props.orderID}
-        cName={props.cName}
-        cAddress={props.cAddress}
-        cPhone={props.cPhone}
-        orderDate={props.orderDate}
-        orderQuantity={props.orderQuantity}
-        cAmount={props.cAmount}
-      />
-      <div className="cutter"></div>
-      <Container
-        orderID={props.orderID}
-        cName={props.cName}
-        cAddress={props.cAddress}
-        cPhone={props.cPhone}
-        orderDate={props.orderDate}
-        orderQuantity={props.orderQuantity}
-        cAmount={props.cAmount}
-      />
+      {invoiceItem.map((item) => {
+        console.log(item.orderDate);
+        return (
+          <div key={item.orderID}>
+            <Container
+              orderID={item.orderID}
+              cName={item.cName}
+              cAddress={item.cAddress}
+              cPhone={item.cPhone}
+              orderDate={item.orderDate}
+              orderQuantity={item.orderQuantity}
+              cAmount={item.cAmount}
+            />
+            <div className="cutter"></div>
+          </div>
+        );
+      })}
     </div>
   );
 });
 
-const Invoice = ({
-  orderID,
-  cName,
-  cAddress,
-  cPhone,
-  orderQuantity,
-  orderDate,
-  cAmount,
-}) => {
+const Invoice = ({ invoiceItem }) => {
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
   });
   return (
     <>
-      <Invoices
-        orderID={orderID}
-        cName={cName}
-        cAddress={cAddress}
-        cPhone={cPhone}
-        orderQuantity={orderQuantity}
-        orderDate={orderDate}
-        cAmount={cAmount}
-        ref={componentRef}
-      />
+      <Invoices ref={componentRef} invoiceItem={invoiceItem} />
       <div className="generate-invoice">
         <NavLink to="/" className="button" style={{ margin: "1rem" }}>
           Back to Home
         </NavLink>
-        {orderID === "" ||
-        cName === "" ||
-        cAddress === "" ||
-        cPhone === "" ||
-        orderDate === "" ||
-        orderQuantity === "" ||
-        cAmount === "" ? (
+        {invoiceItem.length <= 0 ? (
           ""
         ) : (
           <>

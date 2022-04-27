@@ -1,33 +1,40 @@
 import "../css/main.css";
 import { NavLink } from "react-router-dom";
 import logo from "../img/logo.png";
+import { useState } from "react";
 
-
-const Main = ({
-  orderID,
-  setOrderID,
-  cName,
-  setCName,
-  cAddress,
-  setCAddress,
-  cPhone,
-  setCPhone,
-  orderQuantity,
-  setOrderQuantity,
-  orderDate,
-  setOrderDate,
-  cAmount,
-  setCAmount,
-}) => {
+const Main = ({ invoiceItem, setInvoiceItem }) => {
+  const [orderID, setOrderID] = useState("");
+  const [cName, setCName] = useState("");
+  const [cAddress, setCAddress] = useState("");
+  const [cPhone, setCPhone] = useState("");
+  const [orderDate, setOrderDate] = useState("");
+  const [orderQuantity, setOrderQuantity] = useState("");
+  const [cAmount, setCAmount] = useState("");
   const onReset = () => {
-    setCName("")
-    setCAddress("")
-    setCPhone("")
-    setOrderDate("")
-    setOrderID("")
-    setCAmount("")
-    setOrderQuantity("")
-  }
+    setCName("");
+    setCAddress("");
+    setCPhone("");
+    setOrderDate("");
+    setOrderID("");
+    setCAmount("");
+    setOrderQuantity("");
+  };
+  const onAddInvoice = () => {
+    setInvoiceItem([
+      ...invoiceItem,
+      {
+        orderID: orderID,
+        cName: cName,
+        cAddress: cAddress,
+        cPhone: cPhone,
+        orderDate: orderDate,
+        orderQuantity: orderQuantity,
+        cAmount: cAmount,
+      },
+    ]);
+    onReset();
+  };
   return (
     <>
       {/* logo */}
@@ -49,6 +56,7 @@ const Main = ({
           </div>
         </div>
         <div className="item-details">
+          <small style={{marginBottom: "1rem"}}>Current Invoice Items: {invoiceItem.length}</small>
           <form className="item-form">
             <input
               type="text"
@@ -150,8 +158,6 @@ const Main = ({
               value={cAmount}
               onChange={(e) => setCAmount(e.target.value)}
             />
-          </form>
-          <div className="generate-invoice">
             {orderID === "" ||
             cName === "" ||
             cAddress === "" ||
@@ -159,6 +165,17 @@ const Main = ({
             orderDate === "" ||
             orderQuantity === "" ||
             cAmount === "" ? (
+              " "
+            ) : (
+              <div className="generate-invoice">
+                <button onClick={onAddInvoice} className="button">
+                  Add Details {invoiceItem.length + 1}
+                </button>
+              </div>
+            )}
+          </form>
+          <div className="generate-invoice">
+            {invoiceItem.length <= 0 ? (
               ""
             ) : (
               <>
