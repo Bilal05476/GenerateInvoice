@@ -66,26 +66,22 @@ const Container = ({
 
 const Invoices = React.forwardRef((props, ref) => {
   const { invoiceItem } = props;
-  console.log(invoiceItem);
   return (
     <div ref={ref}>
-      {invoiceItem.map((item) => {
-        console.log(item.orderDate);
-        return (
-          <div key={item.orderID}>
-            <Container
-              orderID={item.orderID}
-              cName={item.cName}
-              cAddress={item.cAddress}
-              cPhone={item.cPhone}
-              orderDate={item.orderDate}
-              orderQuantity={item.orderQuantity}
-              cAmount={item.cAmount}
-            />
-            <div className="cutter"></div>
-          </div>
-        );
-      })}
+      {invoiceItem.map((item) => (
+        <div key={item.orderID}>
+          <Container
+            orderID={item.orderID}
+            cName={item.cName}
+            cAddress={item.cAddress}
+            cPhone={item.cPhone}
+            orderDate={item.orderDate}
+            orderQuantity={item.orderQuantity}
+            cAmount={item.cAmount}
+          />
+          <div className="cutter"></div>
+        </div>
+      ))}
     </div>
   );
 });
