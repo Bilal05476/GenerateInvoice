@@ -128,7 +128,7 @@ const Main = ({ invoiceItem, setInvoiceItem }) => {
       <div className="customer-info">
         <div className="top-bar">
           <div className="heading">
-            <h2>Enter the Items to Bill</h2>
+            <h2>Enter Items Quantity and Amount</h2>
           </div>
           <div className="pointer">
             <div className="step">Step 2 of 2</div>
@@ -154,7 +154,7 @@ const Main = ({ invoiceItem, setInvoiceItem }) => {
               type="text"
               name="price"
               id="price"
-              placeholder="Price(Rs)"
+              placeholder="Collection Amount(Rs)"
               value={cAmount}
               onChange={(e) => setCAmount(e.target.value)}
             />
