@@ -41,6 +41,7 @@
 .container .detail h4 {
   background-color: #f1f1f1;
   font-weight: 600;
+  text-transform: capitalize;
   width: 300px;
 }
 .container .detail h4,
@@ -52,7 +53,7 @@
 .container .detail p {
   background-color: #fff;
   width: 100%;
-  font-weight: 300;
+  font-weight: 500;
 }
 .container .right {
   border: 1px solid #ccc;
